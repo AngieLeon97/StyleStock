@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Stock - Detalles del Producto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Barra lateral -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.png" alt="Style Stock Logo">
+            <h3>ANGIE ALEJANDRA LEON CIRO</h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="icon-Inicio"></i> Inicio</a></li>
+                <li><a href="#"><i class="icon-Inventario"></i> Inventario</a></li>
+                <li><a href="#"><i class="icon-Categorias"></i> Categorias</a></li>
+                <li><a href="#"><i class="icon-Productos"></i> Productos</a></li>
+                <li><a href="#"><i class="icon-Actualizar"></i> Actualizar</a></li>
+                <li><a href="#"><i class="icon-Reportes"></i> Reportes</a></li>
+                <li><a href="#"><i class="icon-Proveedores"></i> Proveedores</a></li>
+                <li><a href="#"><i class="icon-Perfil"></i> Perfil</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Detalles del Producto</h1>
+            <hr class="header-line">
+        </header>
+        <div class="button-bar">
+            <div><button class="btn add">+ Agregar</button>
+                <button class="btn delete">Eliminar</button>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar">
+                <button>🔍</button>
+            </div>
+        </div>
+        
+        <!-- Sección de Detalles del Producto -->
+        <section class="product-details">
+            <h2>INFORMACIÓN GENERAL DEL PRODUCTO</h2>
+            <form>
+                <label for="product-name">Producto</label>
+                <input type="text" id="product-name" value="Blusa Seda">
+    
+                <label for="product-code">Código</label>
+                <input type="text" id="product-code" value="SKU12345">
+    
+                <label for="description">Descripción</label>
+                <textarea id="description">Blusa de seda color azul, ideal para ocasiones formales.</textarea>
+            </form>
+        </section>
+    
+        <!-- Sección de Stock Actual y Ubicación -->
+        <section class="stock-location">
+            <h2>STOCK ACTUAL Y UBICACIÓN</h2>
+            <form>
+                <label for="current-stock">Stock Actual</label>
+                <select id="current-stock">
+                    <option selected>50 unidades</option>
+                </select>
+    
+                <label for="location">Ubicación en Almacén</label>
+                <select id="location">
+                    <option selected>Bodega Principal</option>
+                </select>
+            </form>
+        </section>
+    
+        <!-- Historial de Movimientos del Producto -->
+        <section class="product-history">
+            <h2>HISTORIAL DE MOVIMIENTOS DEL PRODUCTO</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Movimiento</th>
+                        <th>Cantidad</th>
+                        <th>Ubicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12/09/2024</td>
+                        <td>Entrada</td>
+                        <td>15</td>
+                        <td>Bodega</td>
+                    </tr>
+                    <tr>
+                        <td>10/09/2024</td>
+                        <td>Salida</td>
+                        <td>5</td>
+                        <td>Bodega</td>
+                    </tr>
+                    <tr>
+                        <td>08/09/2024</td>
+                        <td>Entrada</td>
+                        <td>20</td>
+                        <td>Bodega</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button>Ver todos los movimientos</button>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Style Stock | Inventario de Almacén | Versión 1.0.3</p>
+    </footer>

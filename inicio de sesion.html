@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión - StyleStock</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-section">
+            <img src="logo.png" alt="StyleStock Logo">
+        </div>
+        <div class="form-section">
+            <h3>Acceso con tu cuenta</h3>
+            <form action="php/login.php" method="post"></form>
+            <label for="username">USUARIO</label>
+            <input type="text" id="username" name="username" placeholder="Introduce tu nombre de usuario aquí." autocomplete="username">
+            <label for="password">CONTRASEÑA</label>
+            <input type="password" id="password" name="password" placeholder="Introduce tu contraseña aquí." autocomplete="current-password">
+            <div class="error-message" id="error">⚠️ Error: Usuario o contraseña incorrecta</div>
+            <button type="button" id="loginButton">INICIAR SESIÓN</button>
+            <label class="checkbox">
+                <input type="checkbox"> RECUÉRDAME
+            </label>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const loginButton = document.getElementById('loginButton');
+        if (loginButton) {
+            loginButton.addEventListener('click', function() {
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                if (username === 'admin' && password === '1234') {
+                    window.location.href = 'pagina-principal.html';
+                } else {
+                    document.getElementById('error').style.display = 'block';
+                }
+            });
+        } else {
+            console.error("No se encontró el botón de inicio de sesión.");
+        }
+    });
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - StyleStock</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-section">
+            <img src="logo.png" alt="StyleStock Logo">
+        </div>
+        <div class="form-section">
+            <h3>REGISTRO DE FORMULARIO</h3>
+            <form action="/StyleStock/php/registro.php" method="POST">
+                <label for="nombre">NOMBRE COMPLETO</label>
+                <input type="text" id="nombre" name="nombre">
+            
+                <label for="apellidos">APELLIDOS COMPLETOS</label>
+                <input type="text" id="apellidos" name="apellidos">
+            
+                <label for="cedula">CEDULA</label>
+                <input type="text" id="cedula" name="cedula">
+            
+                <label for="fecha_nacimiento">FECHA DE NACIMIENTO</label>
+                <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="DD/MM/AAAA">
+            
+                <label for="username">NOMBRE DE USUARIO</label>
+                <input type="text" id="username" name="username" placeholder="6-12 caracteres, sin 'ñ'">
+            
+                <label for="password">CONTRASEÑA</label>
+                <input type="password" id="password" name="password" placeholder="Al menos 8 caracteres">
+            
+                <label for="confirm-password">CONFIRMAR CONTRASEÑA</label>
+                <input type="password" id="confirm-password" name="confirm-password">
+            
+                <div class="error-message" id="error">⚠️ Error: Las contraseñas no coinciden</div>
+            
+                <label class="checkbox">
+                    <input type="checkbox" name="terminos"> ACEPTO LOS TÉRMINOS Y CONDICIONES
+                </label>
+            
+                <button type="submit">REGISTRAR</button>
+            </form>
+            
+</body>
+</html>
