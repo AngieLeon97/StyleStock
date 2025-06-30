@@ -1,2 +1,2 @@
-# StyleStock-Login
-Sistema de login y registro de usuarios para Style Stock
+# StyleStock
+Style Stock – Sistema de Inventario de Ropa.
