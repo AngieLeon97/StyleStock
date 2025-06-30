@@ -78,6 +78,19 @@
         <div class="chart-container">
             <canvas id="salesChart"></canvas>
         </div>
+       <!-- NUEVA SECCIÓN: Agregar prenda -->
+        <section id="agregar-producto">
+            <h2>Agregar nueva prenda</h2>
+            <form id="form-prenda">
+                <input type="text" id="nombre" placeholder="Nombre de prenda" required>
+                <input type="text" id="categoria" placeholder="Categoría" required>
+                <input type="text" id="talla" placeholder="Talla" required>
+                <input type="text" id="color" placeholder="Color" required>
+                <input type="number" id="stock" placeholder="Cantidad en stock" required>
+                <button type="submit">Agregar</button>
+            </form>
+            <ul id="lista-prendas"></ul>
+        </section>
     </div>
         
     <footer>
@@ -88,10 +101,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var accordions = document.querySelectorAll(".accordion");
-        
             accordions.forEach(function(accordion) {
                 accordion.addEventListener("click", function () {
-                    // Cierra todos los paneles antes de abrir el seleccionado
                     accordions.forEach(function(otherAccordion) {
                         if (otherAccordion !== accordion) {
                             otherAccordion.classList.remove("active");
@@ -99,15 +110,13 @@
                             otherAccordion.setAttribute("aria-expanded", "false");
                         }
                     });
-        
-                    // Alterna el panel actual
                     this.classList.toggle("active");
                     var panel = this.nextElementSibling;
                     if (panel.style.maxHeight) {
-                        panel.style.maxHeight = null; // Colapsa el panel
+                        panel.style.maxHeight = null;
                         this.setAttribute("aria-expanded", "false");
                     } else {
-                        panel.style.maxHeight = panel.scrollHeight + "px"; // Expande el panel
+                        panel.style.maxHeight = panel.scrollHeight + "px";
                         this.setAttribute("aria-expanded", "true");
                     }
                 });
@@ -115,7 +124,20 @@
         });
     </script>
 
-    <!-- Enlace al archivo JavaScript externo -->
-    <script src="Untitled-1.js"></script>
+    <!-- Script para agregar prenda -->
+    <script>
+        document.getElementById("form-prenda").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById("nombre").value;
+            const categoria = document.getElementById("categoria").value;
+            const talla = document.getElementById("talla").value;
+            const color = document.getElementById("color").value;
+            const stock = document.getElementById("stock").value;
+            const li = document.createElement("li");
+            li.textContent = `${nombre} - ${categoria} - ${talla} - ${color} - Stock: ${stock}`;
+            document.getElementById("lista-prendas").appendChild(li);
+            this.reset();
+        });
+    </script>
 </body>
 </html>

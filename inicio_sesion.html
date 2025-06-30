@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio de Sesión - StyleStock</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-section">
+            <img src="logo.png" alt="StyleStock Logo">
+        </div>
+        <div class="form-section">
+            <h3>Acceso con tu cuenta</h3>
+            <form action="login.php" method="POST">
+                <label for="username">USUARIO</label>
+                <input type="text" name="username" required>
+
+                <label for="password">CONTRASEÑA</label>
+                <input type="password" name="password" required>
+
+                <button type="submit">INICIAR SESIÓN</button>
+
+                <label>
+                    <input type="checkbox"> RECUÉRDAME
+                </label>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
